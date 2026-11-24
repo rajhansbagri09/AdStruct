@@ -2,6 +2,17 @@ import os
 import sys
 
 os.environ["PADDLE_PDX_EAGER_INIT"] = "False"
+import traceback
+
+try:
+    import cv2
+    print("OpenCV version:", cv2.__version__)
+
+except Exception as e:
+    print("OPEN CV IMPORT FAILED:")
+    print(repr(e))
+    traceback.print_exc()
+    raise
 
 print("PaddleX eager init:", os.environ.get("PADDLE_PDX_EAGER_INIT"))
 print("PaddleX already imported:", "paddlex" in sys.modules)
