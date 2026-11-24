@@ -1,3 +1,7 @@
+import os
+
+os.environ["PADDLE_PDX_EAGER_INIT"] = "False"
+
 
 import sys
 import json
