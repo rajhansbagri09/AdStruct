@@ -1,0 +1,38 @@
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Generated outputs
+outputs/uploads/*
+outputs/approved/*
+outputs/rejected/*
+advertisement_output*.json
+raw_advertisement_extraction.json
+
+# Dataset - don't upload private or copyrighted data
+Dataset/*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
