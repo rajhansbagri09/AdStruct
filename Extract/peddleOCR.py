@@ -1,3 +1,8 @@
+import os
+
+# Prevent PaddleX from initializing eagerly during import
+os.environ["PADDLE_PDX_EAGER_INIT"] = "False"
+
 from paddleocr import PaddleOCR
 
 ocr = PaddleOCR(
