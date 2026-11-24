@@ -1,6 +1,10 @@
 import os
+import sys
 
 os.environ["PADDLE_PDX_EAGER_INIT"] = "False"
+
+print("PaddleX eager init:", os.environ.get("PADDLE_PDX_EAGER_INIT"))
+print("PaddleX already imported:", "paddlex" in sys.modules)
 
 
 import sys
